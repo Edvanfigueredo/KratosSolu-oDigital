@@ -1,0 +1,342 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+    cursor:none;
+}
+
+/* LOADER */
+#loader{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#000;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.spinner{
+    width:60px;
+    height:60px;
+    border:5px solid #111;
+    border-top:5px solid #00d9ff;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{transform:rotate(360deg);}
+}
+
+/* Partículas */
+#particles{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+/* Navbar */
+.navbar{
+    position:fixed;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    color:#00d9ff;
+    font-weight:bold;
+    font-size:1.5rem;
+    letter-spacing:3px;
+}
+
+.navbar ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.navbar a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    color:#00d9ff;
+}
+
+/* Menu Mobile */
+.menu-toggle{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+}
+
+.menu-toggle span{
+    width:25px;
+    height:3px;
+    background:#00d9ff;
+}
+
+@media(max-width:768px){
+    .navbar ul{
+        display:none;
+        flex-direction:column;
+        background:#000;
+        position:absolute;
+        top:70px;
+        right:20px;
+        padding:20px;
+        border:1px solid #00d9ff;
+    }
+    .navbar ul.active{
+        display:flex;
+    }
+    .menu-toggle{
+        display:flex;
+    }
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:url("kratos.jpeg") center/cover fixed;
+    background-blend-mode:overlay;
+}
+
+.hero span{color:#00d9ff;}
+
+.btn{
+    margin-top:20px;
+    padding:15px 30px;
+    background:#00d9ff;
+    color:#000;
+    border-radius:30px;
+    text-decoration:none;
+    transition:.3s;
+    font-weight:bold;
+}
+
+.btn:hover{
+    box-shadow:0 0 20px #00d9ff;
+}
+
+/* Cards */
+.servicos{
+    padding:100px 20px;
+    text-align:center;
+    background:#000814;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    margin-top:50px;
+}
+
+.card{
+    padding:40px;
+    border:1px solid #00d9ff;
+    background:rgba(0,217,255,.05);
+    border-radius:15px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #00d9ff;
+}
+
+.contato{
+    padding:100px 20px;
+    text-align:center;
+    background:#001f2f;
+}
+
+/* Botões fixos */
+.whatsapp-float,
+.instagram-float{
+    position:fixed;
+    right:25px;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
+    z-index:1000;
+    transition:.3s;
+}
+
+.whatsapp-float{
+    bottom:25px;
+    background:#00d9ff;
+    color:#000;
+    box-shadow:0 0 15px #00d9ff;
+}
+
+.instagram-float{
+    bottom:90px;
+    background:linear-gradient(45deg,#833ab4,#fd1d1d,#fcb045);
+    color:#fff;
+}
+
+.whatsapp-float:hover,
+.instagram-float:hover{
+    transform:scale(1.2);
+}
+
+/* CURSOR RAIO KRATOS */
+.cursor {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(45deg, #00d9ff, #0099ff);
+    clip-path: polygon(
+        40% 0%,
+        60% 0%,
+        45% 40%,
+        70% 40%,
+        30% 100%,
+        45% 60%,
+        25% 60%
+    );
+    pointer-events: none;
+    z-index: 9999;
+    filter: drop-shadow(0 0 8px #00d9ff);
+    transition: transform 0.1s ease;
+}
+
+/* CONTAINER FIXO */
+.fixed-contact{
+    position: fixed;
+    right: 20px;
+    bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* LOGO ACIMA */
+.fixed-logo{
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #00d9ff);
+    animation: pulse 2s infinite;
+}
+
+/* Botão WhatsApp */
+.whatsapp-fixed{
+    background: #00d9ff;
+    color: #000;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 15px #00d9ff;
+    transition: 0.3s;
+}
+
+.whatsapp-fixed:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #00d9ff;
+}
+
+/* Animação leve no logo */
+@keyframes pulse{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.08);}
+    100%{transform: scale(1);}
+}
+
+/* FOOTER PREMIUM */
+.footer{
+    background: linear-gradient(180deg,#000814,#000);
+    padding: 50px 20px;
+    border-top: 1px solid rgba(0,217,255,0.3);
+}
+
+.footer-content{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo img{
+  width: 180px; /* maior */
+    height: auto;
+    filter: drop-shadow(0 0 15px #00d9ff);
+    transition: 0.4s ease;
+}
+
+.footer-logo img:hover{
+    transform: scale(1.05);
+}
+
+.footer-info{
+    text-align: right;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.footer-info p{
+    margin-bottom: 8px;
+}
+
+/* Responsivo */
+@media(max-width:768px){
+
+    .footer-content{
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-info{
+        text-align: center;
+    }
+
+    .footer-logo img{
+        width: 140px;
+    }
+
+}
+
+footer {
+    display: flex;
+    justify-content: center;   /* Centraliza horizontal */
+    align-items: center;       /* Centraliza vertical (se tiver altura definida) */
+    text-align: center;
+}
+
+.footer-info {
+    text-align: center;
+}
