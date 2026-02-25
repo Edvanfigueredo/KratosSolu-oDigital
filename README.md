@@ -68,7 +68,8 @@ O projeto está publicado via GitHub Pages:
 ## 📲 Contato
 
 📱 WhatsApp: https://bit.ly/orçamento_EF  
-📸 Instagram: https://www.instagram.com/kratos_solucaodigital  
+📸 Instagram: https://www.instagram.com/kratos_solucaodigital 
+💻Link: https://bit.ly/kratosSD
 
 ---
 
