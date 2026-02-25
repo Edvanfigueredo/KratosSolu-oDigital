@@ -76,7 +76,7 @@ O projeto está publicado via GitHub Pages:
 
 ## 🔥 Autor
 
-**Edvan Figueiredo**  
+**Edvan Figuerêdo**  
 Desenvolvedor & Fundador da Kratos Solução Digital  
 
 ---
